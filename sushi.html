@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sakura Sushi Premium</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Noto Sans Thai',sans-serif;
+}
+
+body{
+
+background:#fffefb;
+color:#333;
+line-height:1.6;
+
+}
+
+header{
+
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.6)),
+url("https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+
+}
+
+.hero h1{
+
+font-size:70px;
+margin-bottom:20px;
+font-weight:900;
+
+}
+
+.hero p{
+
+font-size:24px;
+margin-bottom:35px;
+
+}
+
+.hero a{
+
+display:inline-block;
+padding:18px 45px;
+
+background:#ffcc00;
+
+color:#222;
+
+text-decoration:none;
+
+font-size:22px;
+
+font-weight:bold;
+
+border-radius:50px;
+
+transition:.3s;
+
+}
+
+.hero a:hover{
+
+background:#ff4444;
+color:white;
+
+}
+
+section{
+
+padding:80px 10%;
+
+}
+
+.title{
+
+text-align:center;
+
+font-size:42px;
+
+margin-bottom:15px;
+
+font-weight:900;
+
+color:#d40000;
+
+}
+
+.subtitle{
+
+text-align:center;
+margin-bottom:60px;
+font-size:18px;
+color:#666;
+
+}
+
+.menu-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card img{
+
+width:100%;
+height:220px;
+object-fit:cover;
+
+}
+
+.card-content{
+
+padding:25px;
+
+}
+
+.card h3{
+
+color:#c40000;
+
+font-size:28px;
+
+margin-bottom:10px;
+
+}
+
+.price{
+
+font-size:30px;
+
+font-weight:bold;
+
+color:#ff9800;
+
+margin:15px 0;
+
+}
+
+.tag{
+
+display:inline-block;
+
+padding:6px 12px;
+
+background:#ffe8e8;
+
+border-radius:20px;
+
+font-size:14px;
+
+margin-bottom:12px;
+
+color:#d60000;
+
+}
+
+.features{
+
+background:#fff5e9;
+
+}
+
+.feature-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+text-align:center;
+
+}
+
+.feature{
+
+padding:30px;
+
+background:white;
+
+border-radius:15px;
+
+}
+
+.feature h3{
+
+margin:15px 0;
+
+color:#c40000;
+
+}
+
+.review{
+
+background:#fafafa;
+
+}
+
+.review-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:25px;
+
+}
+
+.review-box{
+
+background:white;
+
+padding:30px;
+
+border-radius:15px;
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.review-box h4{
+
+margin-top:15px;
+
+color:#d40000;
+
+}
+
+.cta{
+
+background:#b30000;
+
+color:white;
+
+text-align:center;
+
+}
+
+.cta h2{
+
+font-size:46px;
+
+margin-bottom:20px;
+
+}
+
+.cta p{
+
+font-size:20px;
+
+margin-bottom:35px;
+
+}
+
+.cta a{
+
+display:inline-block;
+
+padding:18px 50px;
+
+background:#ffd400;
+
+text-decoration:none;
+
+font-size:24px;
+
+font-weight:bold;
+
+color:black;
+
+border-radius:50px;
+
+}
+
+footer{
+
+background:#222;
+
+color:white;
+
+padding:30px;
+
+text-align:center;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.title{
+
+font-size:34px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="hero">
+
+<h1>🍣 Sakura Sushi Premium</h1>
+
+<p>สัมผัสรสชาติซูชิระดับพรีเมียม สดใหม่ทุกคำ</p>
+
+<a href="#menu">ดูเมนูยอดนิยม</a>
+
+</div>
+
+</header>
+
+<section id="menu">
+
+<h2 class="title">เมนูยอดนิยม</h2>
+
+<p class="subtitle">5 เมนูขายดีที่สุดของร้าน</p>
+
+<div class="menu-grid">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<div class="tag">BEST SELLER</div>
+
+<h3>Salmon Nigiri</h3>
+
+<p>แซลมอนสดจากนอร์เวย์ เนื้อนุ่ม ละลายในปาก</p>
+
+<div class="price">189 บาท</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<div class="tag">PREMIUM</div>
+
+<h3>Otoro Sushi</h3>
+
+<p>ทูน่าส่วนท้องระดับพรีเมียม ไขมันแทรกกำลังดี</p>
+
+<div class="price">490 บาท</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<div class="tag">TOP MENU</div>
+
+<h3>Ebi Sushi</h3>
+
+<p>กุ้งหวาน เนื้อแน่น สดใหม่ทุกวัน</p>
+
+<div class="price">159 บาท</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<div class="tag">CHEF RECOMMEND</div>
+
+<h3>Unagi Sushi</h3>
+
+<p>ปลาไหลญี่ปุ่นย่างซอสสูตรต้นตำรับ</p>
+
+<div class="price">249 บาท</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1562158070-57d5b2bca422?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<div class="tag">SIGNATURE</div>
+
+<h3>Ikura Gunkan</h3>
+
+<p>ไข่ปลาแซลมอนเต็มคำ รสชาติหอมมัน</p>
+
+<div class="price">229 บาท</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<h2 class="title">ทำไมต้องเลือกเรา</h2>
+
+<div class="feature-grid">
+
+<div class="feature">
+
+<h3>🐟 สดใหม่ทุกวัน</h3>
+
+<p>นำเข้าวัตถุดิบคุณภาพจากญี่ปุ่นและนอร์เวย์</p>
+
+</div>
+
+<div class="feature">
+
+<h3>👨‍🍳 เชฟมืออาชีพ</h3>
+
+<p>เชฟประสบการณ์กว่า 15 ปี</p>
+
+</div>
+
+<div class="feature">
+
+<h3>⭐ Premium Quality</h3>
+
+<p>คัดสรรเฉพาะวัตถุดิบเกรดพรีเมียม</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🚚 Delivery</h3>
+
+<p>จัดส่งรวดเร็ว พร้อมรักษาความสด</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="review">
+
+<h2 class="title">รีวิวจากลูกค้า</h2>
+
+<div class="review-grid">
+
+<div class="review-box">
+
+★★★★★
+
+<p>
+
+แซลมอนสดมาก ละลายในปาก คุ้มค่ามาก
+
+</p>
+
+<h4>— คุณสมชาย</h4>
+
+</div>
+
+<div class="review-box">
+
+★★★★★
+
+<p>
+
+Otoro อร่อยที่สุดตั้งแต่เคยกินมา
+
+</p>
+
+<h4>— คุณกิตติ</h4>
+
+</div>
+
+<div class="review-box">
+
+★★★★★
+
+<p>
+
+ร้านสวย อาหารสด เชฟบริการดีมาก
+
+</p>
+
+<h4>— คุณอร</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>🍣 พร้อมลิ้มลองหรือยัง?</h2>
+
+<p>
+
+โปรโมชั่นเปิดร้าน ลดทันที 15% สำหรับลูกค้าใหม่
+
+</p>
+
+<a href="#">สั่งซื้อเลย</a>
+
+</section>
+
+<footer>
+
+<h3>Sakura Sushi Premium</h3>
+
+<p>
+
+📍 ถนนสุขุมวิท กรุงเทพฯ
+
+</p>
+
+<p>
+
+☎ 02-123-4567
+
+</p>
+
+<p>
+
+Open Daily 10:00 - 22:00
+
+</p>
+
+</footer>
+
+</body>
+</html>

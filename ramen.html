@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🔥 Ramen Fire - Japanese Ramen</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Noto Sans Thai',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#111;
+color:white;
+overflow-x:hidden;
+
+}
+
+/* Navigation */
+
+nav{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.7);
+backdrop-filter:blur(10px);
+z-index:999;
+
+}
+
+.logo{
+
+font-size:30px;
+font-weight:bold;
+color:#ff3c00;
+
+}
+
+nav ul{
+
+display:flex;
+list-style:none;
+gap:35px;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#ffb000;
+
+}
+
+/* Hero */
+
+.hero{
+
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1617093727343-374698b1b08d?auto=format&fit=crop&w=1600&q=80');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+padding:0 10%;
+
+}
+
+.hero-text{
+
+max-width:650px;
+
+}
+
+.hero h1{
+
+font-size:72px;
+line-height:1.1;
+
+}
+
+.hero h1 span{
+
+color:#ff3d00;
+
+}
+
+.hero p{
+
+margin:25px 0;
+font-size:20px;
+line-height:1.8;
+color:#ddd;
+
+}
+
+.btn{
+
+display:inline-block;
+padding:18px 40px;
+background:linear-gradient(90deg,#ff2d00,#ff9800);
+color:white;
+text-decoration:none;
+font-weight:bold;
+border-radius:50px;
+transition:.4s;
+box-shadow:0 0 30px rgba(255,80,0,.4);
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+box-shadow:0 0 50px rgba(255,120,0,.7);
+
+}
+
+/* section */
+
+section{
+
+padding:100px 8%;
+
+}
+
+.title{
+
+text-align:center;
+font-size:45px;
+margin-bottom:50px;
+color:#ffb300;
+
+}
+
+/* cards */
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:#1a1a1a;
+border-radius:20px;
+overflow:hidden;
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card img{
+
+width:100%;
+height:250px;
+object-fit:cover;
+
+}
+
+.card-content{
+
+padding:25px;
+
+}
+
+.card h3{
+
+margin-bottom:10px;
+font-size:28px;
+color:#ff5722;
+
+}
+
+.price{
+
+font-size:26px;
+font-weight:bold;
+color:#ffc107;
+margin-top:15px;
+
+}
+
+/* Features */
+
+.features{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+
+}
+
+.feature{
+
+background:#1b1b1b;
+padding:40px;
+border-left:5px solid #ff3d00;
+border-radius:15px;
+
+}
+
+.feature h3{
+
+margin:20px 0;
+
+}
+
+/* Reviews */
+
+.review{
+
+background:#1c1c1c;
+padding:35px;
+border-radius:20px;
+
+}
+
+.review h4{
+
+color:#ff9800;
+margin-top:15px;
+
+}
+
+/* CTA */
+
+.cta{
+
+text-align:center;
+
+background:
+
+linear-gradient(135deg,#9b0000,#ff3c00);
+
+}
+
+.cta h2{
+
+font-size:48px;
+
+}
+
+.cta p{
+
+margin:20px auto;
+max-width:700px;
+font-size:20px;
+
+}
+
+footer{
+
+padding:35px;
+text-align:center;
+background:#000;
+color:#999;
+
+}
+
+.fade{
+
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+
+}
+
+.fade.show{
+
+opacity:1;
+transform:none;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+.title{
+
+font-size:35px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">🍜 RAMEN FIRE</div>
+
+<ul>
+
+<li><a href="#menu">เมนู</a></li>
+
+<li><a href="#why">จุดเด่น</a></li>
+
+<li><a href="#review">รีวิว</a></li>
+
+<li><a href="#contact">ติดต่อ</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+
+ราเมนญี่ปุ่นแท้<br>
+
+<span>ร้อน...เข้ม...ถึงใจ</span>
+
+</h1>
+
+<p>
+
+ซุปเคี่ยวกว่า 18 ชั่วโมง เส้นสดทำใหม่ทุกวัน
+พร้อมหมูชาชูสูตรต้นตำรับจากญี่ปุ่น
+
+</p>
+
+<a href="#menu" class="btn">ดูเมนูยอดนิยม</a>
+
+</div>
+
+</section>
+
+<section id="menu">
+
+<h2 class="title">🍜 เมนูแนะนำ</h2>
+
+<div class="grid">
+
+<div class="card fade">
+
+<img src="https://images.unsplash.com/photo-1557872943-16a5ac26437e?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+
+<h3>Spicy Tonkotsu</h3>
+
+<p>ซุปกระดูกหมูเข้มข้น เพิ่มความเผ็ดแบบญี่ปุ่นแท้</p>
+
+<div class="price">฿259</div>
+
+</div>
+
+</div>
+
+<div class="card fade">
+
+<img src="https://images.unsplash.com/photo-1618841557871-b4664fbf0cb3?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+
+<h3>Miso Ramen</h3>
+
+<p>มิโซะแท้จากฮอกไกโด หอม เข้ม กลมกล่อม</p>
+
+<div class="price">฿239</div>
+
+</div>
+
+</div>
+
+<div class="card fade">
+
+<img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+
+<h3>Black Garlic</h3>
+
+<p>ราเมนกระเทียมดำ สูตรพรีเมียม หอมละมุน</p>
+
+<div class="price">฿279</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="why">
+
+<h2 class="title">🔥 ทำไมต้อง RAMEN FIRE</h2>
+
+<div class="features">
+
+<div class="feature fade">
+
+<h3>🥢 เส้นสดทุกวัน</h3>
+
+<p>นวดสดใหม่ทุกเช้า เหนียวนุ่มทุกคำ</p>
+
+</div>
+
+<div class="feature fade">
+
+<h3>🍖 ชาชูพรีเมียม</h3>
+
+<p>หมูชาชูตุ๋นกว่า 8 ชั่วโมง</p>
+
+</div>
+
+<div class="feature fade">
+
+<h3>🍲 ซุปเคี่ยว 18 ชั่วโมง</h3>
+
+<p>เข้มข้น หอมกลมกล่อม สูตรต้นตำรับญี่ปุ่น</p>
+
+</div>
+
+<div class="feature fade">
+
+<h3>🌶 เผ็ดระดับเลือกได้</h3>
+
+<p>เลือกได้ตั้งแต่ Level 1 ถึง Level 10</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="review">
+
+<h2 class="title">⭐ รีวิวจากลูกค้า</h2>
+
+<div class="grid">
+
+<div class="review fade">
+
+<p>
+
+★★★★★
+
+<br><br>
+
+"ซุปเข้มข้นที่สุดที่เคยกินในไทย"
+
+</p>
+
+<h4>- คุณสมชาย</h4>
+
+</div>
+
+<div class="review fade">
+
+<p>
+
+★★★★★
+
+<br><br>
+
+"หมูชาชูนุ่มละลายในปาก"
+
+</p>
+
+<h4>- คุณแอน</h4>
+
+</div>
+
+<div class="review fade">
+
+<p>
+
+★★★★★
+
+<br><br>
+
+"เผ็ดสะใจ บรรยากาศเหมือนอยู่ญี่ปุ่น"
+
+</p>
+
+<h4>- คุณต้น</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta" id="contact">
+
+<h2>พร้อมเสิร์ฟทุกวัน</h2>
+
+<p>
+
+เปิดบริการ 11.00 - 22.00 น.
+
+<br><br>
+
+โทร : 02-123-4567
+
+<br>
+
+Facebook : RAMEN FIRE
+
+</p>
+
+<a href="#" class="btn">จองโต๊ะเลย</a>
+
+</section>
+
+<footer>
+
+© 2026 RAMEN FIRE | Japanese Ramen Restaurant
+
+</footer>
+
+<script>
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('show');
+
+}
+
+})
+
+});
+
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+
+</script>
+
+</body>
+</html>

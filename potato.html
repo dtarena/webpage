@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Potato ChicChic | มันฝรั่งทอดไส้ทะลัก</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Kanit',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#fffdf6;
+color:#333;
+}
+
+header{
+position:fixed;
+width:100%;
+background:rgba(255,193,7,.95);
+backdrop-filter:blur(10px);
+z-index:999;
+box-shadow:0 2px 15px rgba(0,0,0,.1);
+}
+
+nav{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 25px;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#5b3200;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:#5b3200;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#fff;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:100px 10%;
+background:
+linear-gradient(rgba(255,215,0,.55),rgba(255,193,7,.75)),
+url("https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:650px;
+color:white;
+}
+
+.hero h1{
+font-size:65px;
+line-height:1.1;
+margin-bottom:20px;
+text-shadow:2px 2px 10px rgba(0,0,0,.4);
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:16px 40px;
+background:#ff6b00;
+color:white;
+text-decoration:none;
+font-size:20px;
+border-radius:50px;
+transition:.3s;
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.btn:hover{
+transform:translateY(-4px);
+background:#ff8300;
+}
+
+section{
+padding:90px 8%;
+}
+
+.title{
+text-align:center;
+font-size:42px;
+color:#cc8500;
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:230px;
+object-fit:cover;
+}
+
+.card-content{
+padding:25px;
+}
+
+.card h3{
+color:#c76a00;
+margin-bottom:10px;
+}
+
+.price{
+font-size:26px;
+color:#ff6b00;
+font-weight:bold;
+margin-top:15px;
+}
+
+.feature{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.box{
+background:#fff6da;
+padding:40px;
+border-radius:20px;
+}
+
+.box h2{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.promo{
+background:linear-gradient(135deg,#ffb300,#ff7300);
+color:white;
+text-align:center;
+border-radius:25px;
+padding:70px;
+}
+
+.promo h2{
+font-size:48px;
+}
+
+.promo p{
+font-size:22px;
+margin:20px 0;
+}
+
+.review{
+background:#fff8e7;
+border-radius:20px;
+padding:30px;
+}
+
+.review h4{
+color:#ff9800;
+margin-bottom:10px;
+}
+
+.contact{
+text-align:center;
+background:#2c2c2c;
+color:white;
+}
+
+.contact h2{
+color:#FFD54F;
+margin-bottom:20px;
+}
+
+footer{
+background:#111;
+color:#ccc;
+text-align:center;
+padding:25px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:45px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">🥔 Potato ChicChic</div>
+
+<ul>
+<li><a href="#menu">เมนู</a></li>
+<li><a href="#feature">จุดเด่น</a></li>
+<li><a href="#promo">โปรโมชั่น</a></li>
+<li><a href="#review">รีวิว</a></li>
+<li><a href="#contact">ติดต่อ</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>มันฝรั่งทอด<br>ไส้ทะลัก!</h1>
+
+<p>
+กรอบนอก นุ่มใน ไส้ชีสเยิ้มทุกคำ
+สดใหม่ทุกออเดอร์ อร่อยจนหยุดไม่ได้
+</p>
+
+<a href="#menu" class="btn">ดูเมนู</a>
+
+</div>
+
+</section>
+
+<section id="menu">
+
+<h2 class="title">เมนูยอดนิยม</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1518013431117-eb1465fa5752?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<h3>Cheese Lava Potato</h3>
+
+<p>มันฝรั่งทอดกรอบ ไส้ชีสลาวาเยิ้มเต็มคำ</p>
+
+<div class="price">89 บาท</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<h3>Double Cheese</h3>
+
+<p>ชีส 2 ชั้น หอม มัน เข้มข้น</p>
+
+<div class="price">99 บาท</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<h3>Spicy ChicChic</h3>
+
+<p>ชีสทะลัก พร้อมซอสเผ็ดสูตรพิเศษ</p>
+
+<div class="price">109 บาท</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="feature">
+
+<h2 class="title">ทำไมต้อง Potato ChicChic</h2>
+
+<div class="feature">
+
+<div class="box">
+<h2>🥔</h2>
+<h3>มันฝรั่งแท้</h3>
+<p>คัดเกรดคุณภาพทุกลูก</p>
+</div>
+
+<div class="box">
+<h2>🧀</h2>
+<h3>ชีสทะลัก</h3>
+<p>ไส้เยิ้มทุกชิ้น</p>
+</div>
+
+<div class="box">
+<h2>🔥</h2>
+<h3>ทอดสด</h3>
+<p>ทำใหม่ทุกออเดอร์</p>
+</div>
+
+<div class="box">
+<h2>⭐</h2>
+<h3>รีวิวดี</h3>
+<p>ลูกค้ากลับมาซื้อซ้ำ</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="promo">
+
+<div class="promo">
+
+<h2>โปรโมชั่นเปิดร้าน</h2>
+
+<p>
+
+ซื้อ 2 กล่อง ลดทันที 20%<br>
+
+แถมฟรี ชีสดิป 1 ถ้วย
+
+</p>
+
+<a class="btn" href="#contact">สั่งเลย</a>
+
+</div>
+
+</section>
+
+<section id="review">
+
+<h2 class="title">เสียงจากลูกค้า</h2>
+
+<div class="cards">
+
+<div class="review">
+<h4>★★★★★</h4>
+<p>
+ชีสเยิ้มมาก อร่อยสุด ๆ
+</p>
+</div>
+
+<div class="review">
+<h4>★★★★★</h4>
+<p>
+กรอบนอกนุ่มใน สมราคา
+</p>
+</div>
+
+<div class="review">
+<h4>★★★★★</h4>
+<p>
+กินครั้งแรกติดใจ ซื้อซ้ำแน่นอน
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>Potato ChicChic</h2>
+
+<p>📍 พร้อมเสิร์ฟทุกวัน</p>
+
+<p>🕙 10:00 - 21:00 น.</p>
+
+<p>📞 08X-XXX-XXXX</p>
+
+<p>LINE : @PotatoChicChic</p>
+
+<br>
+
+<a class="btn" href="#">สั่งผ่าน LINE</a>
+
+</section>
+
+<footer>
+
+© 2026 Potato ChicChic • Fresh Crispy • Cheese Lava
+
+</footer>
+
+<script>
+
+const cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-12px) scale(1.03)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0px) scale(1)";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
